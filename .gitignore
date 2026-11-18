@@ -1,0 +1,96 @@
+## .gitignore for C# .NET Console App (Visual Studio)
+
+# ----- Visual Studio -----
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.vspscc
+*.vssscc
+*.ncb
+*.aps
+
+# ----- Build output -----
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Dd]ebugPublic/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+
+# ----- Publish output -----
+[Pp]ublish/
+*.[Pp]ublish.xml
+*.pubxml.user
+*.azurePubxml
+PublishScripts/
+
+# ----- NuGet -----
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+
+# ----- Test results & coverage -----
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+TestResults/
+
+# ----- Tooling caches -----
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+.idea/
+*.sln.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ----- Misc generated files -----
+*.cache
+*.pdb
+*.ilk
+*.log
+*.tlog
+*.tmp
+*.tmp_proj
+*.pidb
+*.svclog
+*.scc
+ipch/
+*.opendb
+*.VC.db
+
+# ----- Secrets & local config -----
+appsettings.*.local.json
+*.env
+.env
+secrets.json
+
+# ----- OS files -----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
