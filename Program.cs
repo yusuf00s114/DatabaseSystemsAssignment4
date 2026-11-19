@@ -1,9 +1,9 @@
-﻿
-using Murmur;
+﻿using Murmur;
 using System.Text;
 
-int n = int.Parse(args[0]);
+CreateFileInCurrentDirectory("overflow_buckets.txt");
 
+int n = int.Parse(args[0]);
 int s = int.Parse(args[1]);
 
 while (true)
@@ -18,14 +18,23 @@ while (true)
 
 void Add(string str)
 {
-	Console.WriteLine(str + " added");
-
 	byte[] input = Encoding.UTF8.GetBytes(str);
 	var murmur32 = MurmurHash.Create32(0);
 	byte[] hash32 = murmur32.ComputeHash(input);
 	uint hashInt = BitConverter.ToUInt32(hash32, 0);
 
-	Console.WriteLine("MurmurHash3 32-bit: " + hashInt);
+	string bucketFilename = hashInt % n + ".txt";
+
+	if(!File.Exists(GetPathOfFile(bucketFilename)))
+	{
+		CreateFileInCurrentDirectory(bucketFilename);
+	}
+
+	//int numberOfCharacters = File.ReadAllText(GetPathOfFile(bucketFilename)).Length;
+
+	WriteToFile(GetPathOfFile(bucketFilename), str);
+
+	Console.WriteLine(str + " added to " + bucketFilename);
 }
 
 

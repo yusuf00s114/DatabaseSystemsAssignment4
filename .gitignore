@@ -1,5 +1,7 @@
 ## .gitignore for C# .NET Console App (Visual Studio)
 
+*.txt
+
 # ----- Visual Studio -----
 .vs/
 *.suo
